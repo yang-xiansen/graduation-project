@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.mapper.LogMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.domain.Log" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dlr" property="dlr" jdbcType="VARCHAR" />
+    <result column="dlsj" property="dlsj" jdbcType="VARCHAR" />
+    <result column="dlip" property="dlip" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, dlr, dlsj, dlip
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+   <select id="select" resultMap="BaseResultMap" parameterType="cn.com.project.domain.Log" >
+    select 
+    <include refid="Base_Column_List" />
+    from log
+     <where>
+           <if test="dlr !=null and dlr !=''">
+            and dlr=#{dlr}
+           </if>
+      </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.domain.Log" >
+    insert into log (id, dlr, dlsj, 
+      dlip)
+    values (#{id,jdbcType=INTEGER}, #{dlr,jdbcType=VARCHAR}, #{dlsj,jdbcType=VARCHAR}, 
+      #{dlip,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.domain.Log" >
+    insert into log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="dlr != null" >
+        dlr,
+      </if>
+      <if test="dlsj != null" >
+        dlsj,
+      </if>
+      <if test="dlip != null" >
+        dlip,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="dlr != null" >
+        #{dlr,jdbcType=VARCHAR},
+      </if>
+      <if test="dlsj != null" >
+        #{dlsj,jdbcType=VARCHAR},
+      </if>
+      <if test="dlip != null" >
+        #{dlip,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.domain.Log" >
+    update log
+    <set >
+      <if test="dlr != null" >
+        dlr = #{dlr,jdbcType=VARCHAR},
+      </if>
+      <if test="dlsj != null" >
+        dlsj = #{dlsj,jdbcType=VARCHAR},
+      </if>
+      <if test="dlip != null" >
+        dlip = #{dlip,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.domain.Log" >
+    update log
+    set dlr = #{dlr,jdbcType=VARCHAR},
+      dlsj = #{dlsj,jdbcType=VARCHAR},
+      dlip = #{dlip,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

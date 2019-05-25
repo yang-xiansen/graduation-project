@@ -1,0 +1,30 @@
+2019-03-17 23:06:16:374 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-17 23:06:16:579 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-17 23:06:16:763 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 0
+2019-03-17 23:06:34:823 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-17 23:06:34:852 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-17 23:06:34:872 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-17 23:06:35:107 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-17 23:06:35:112 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-17 23:06:34(String), 192.168.1.100(String)
+2019-03-17 23:06:35:166 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-17 23:08:27:146 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-17 23:08:27:202 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-17 23:08:27:298 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-17 23:08:27:393 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-17 23:08:27:398 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-17 23:08:27(String), 192.168.1.100(String)
+2019-03-17 23:08:27:430 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-17 23:10:40:419 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-17 23:10:40:453 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-17 23:10:40:476 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-17 23:10:40:493 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-17 23:10:40:500 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-17 23:10:40(String), 192.168.1.100(String)
+2019-03-17 23:10:40:512 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-17 23:12:15:304 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-17 23:12:15:312 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-17 23:12:15:321 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-17 23:12:15:337 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-17 23:12:15:341 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-17 23:12:15(String), 192.168.1.100(String)
+2019-03-17 23:12:15:353 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-17 23:16:33:017 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-03-17 23:16:33:022 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-17 23:16:33:069 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 0

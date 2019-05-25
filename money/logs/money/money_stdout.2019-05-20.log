@@ -1,0 +1,53 @@
+2019-05-20 18:46:56:065 [cn.com.project.MoneyApplication:659]-[INFO] No active profile set, falling back to default profiles: default
+2019-05-20 18:47:37:747 [cn.com.project.MoneyApplication:59]-[INFO] Started MoneyApplication in 51.309 seconds (JVM running for 52.854)
+2019-05-20 18:49:01:902 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-20 18:49:01:947 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-20 18:49:01:969 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-20 18:49:02:072 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-20 18:49:02:076 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-20 18:49:01(String), 10.130.56.61(String)
+2019-05-20 18:49:02:079 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-20 18:49:06:415 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-20 18:49:06:416 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-20 18:49:06:419 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 18:49:09:353 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-20 18:49:09:354 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-20 18:49:09:357 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 18:49:24:086 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-20 18:49:24:087 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-20 18:49:24:089 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 18:49:27:174 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? 
+2019-05-20 18:49:27:175 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-20 18:49:27:179 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-20 18:49:33:437 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET state = ? where id = ? 
+2019-05-20 18:49:33:439 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 3000(String), 2(Integer)
+2019-05-20 18:49:33:441 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-20 18:49:33:570 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-20 18:49:33:571 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-20 18:49:33:577 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 18:53:29:753 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE a.account=? 
+2019-05-20 18:53:29:786 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 刘飞(String)
+2019-05-20 18:53:29:798 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-20 18:53:34:618 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-20 18:53:34:619 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-20 18:53:34:624 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-20 18:53:34:627 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id LIMIT ? 
+2019-05-20 18:53:34:628 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-20 18:53:34:634 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 19:13:18:621 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-20 19:13:18:622 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明(String), a(String)
+2019-05-20 19:13:18:625 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 0
+2019-05-20 19:13:26:466 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-20 19:13:26:467 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: 李明(String), 1(String)
+2019-05-20 19:13:26:468 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-20 19:13:26:469 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-20 19:13:26:470 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明(String), 1(String), 10(Integer)
+2019-05-20 19:13:26:472 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-20 19:13:26:477 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-20 19:13:26:480 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 李明(String), 2019-05-20 19:13:26(String), 10.130.56.61(String)
+2019-05-20 19:13:26:482 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-20 19:13:30:489 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-05-20 19:13:30:492 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-20 19:13:30:495 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-20 19:13:48:189 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? 
+2019-05-20 19:13:48:190 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-20 19:13:48:193 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1

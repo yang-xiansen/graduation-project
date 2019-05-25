@@ -1,0 +1,6 @@
+2019-03-16 09:03:23:467 [cn.com.project.RelationApplication:659]-[INFO] No active profile set, falling back to default profiles: default
+2019-03-16 09:05:29:886 [cn.com.project.RelationApplication:659]-[INFO] No active profile set, falling back to default profiles: default
+2019-03-16 09:05:37:703 [zipkin2.reporter.AsyncReporter$BoundedAsyncReporter:312]-[WARN] Timed out waiting for in-flight spans to send
+2019-03-16 09:06:20:159 [cn.com.project.RelationApplication:659]-[INFO] No active profile set, falling back to default profiles: default
+2019-03-16 09:06:32:587 [cn.com.project.RelationApplication:59]-[INFO] Started RelationApplication in 17.303 seconds (JVM running for 20.908)
+2019-03-16 09:07:08:253 [zipkin2.reporter.AsyncReporter$BoundedAsyncReporter:312]-[WARN] Timed out waiting for in-flight spans to send

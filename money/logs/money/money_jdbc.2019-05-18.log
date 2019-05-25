@@ -1,0 +1,876 @@
+2019-05-18 10:33:24:786 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 10:33:24:915 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-18 10:33:25:019 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:25:215 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 10:33:25:217 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-18 10:33:25(String), 10.130.56.61(String)
+2019-05-18 10:33:25:268 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:34:209 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:34:211 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:34:216 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 10
+2019-05-18 10:33:37:166 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:37:167 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 10:33:37:169 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:37:220 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:37:223 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:37:238 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 9
+2019-05-18 10:33:39:988 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:39:989 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 10:33:39:991 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:39:999 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:40:000 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:40:003 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 8
+2019-05-18 10:33:44:731 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:44:734 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-05-18 10:33:44:735 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:44:742 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:44:743 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:44:745 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 7
+2019-05-18 10:33:45:801 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:45:803 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-05-18 10:33:45:805 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:45:820 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:45:821 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:45:823 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 6
+2019-05-18 10:33:46:509 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:46:511 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 5(Integer)
+2019-05-18 10:33:46:512 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:46:651 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-05-18 10:33:46:652 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:46:655 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:46:658 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-05-18 10:33:46:659 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-05-18 10:33:46:662 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 5
+2019-05-18 10:33:47:189 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:47:190 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 6(Integer)
+2019-05-18 10:33:47:191 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:47:198 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-05-18 10:33:47:201 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:47:202 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:47:205 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-05-18 10:33:47:206 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-05-18 10:33:47:207 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 4
+2019-05-18 10:33:47:851 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:47:852 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 7(Integer)
+2019-05-18 10:33:47:853 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:47:860 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:47:861 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:47:862 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 10:33:48:372 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:48:373 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 8(Integer)
+2019-05-18 10:33:48:374 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:48:385 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:48:386 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:48:388 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 10:33:49:019 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:49:020 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 10:33:49:021 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:49:027 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-18 10:33:49:027 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:49:029 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:49:609 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-05-18 10:33:49:610 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 10:33:49:612 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:33:49:623 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-05-18 10:33:49:624 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:49:626 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:51:077 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM lxr 
+2019-05-18 10:33:51:078 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:33:51:223 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:56:053 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:33:56:054 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:33:56:059 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:33:56:062 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:33:56:063 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 50(Integer)
+2019-05-18 10:33:56:068 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:00:008 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-05-18 10:34:00:010 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-05-18 10:34:00:013 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:00:017 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin where id = ? LIMIT ? 
+2019-05-18 10:34:00:019 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer), 50(Integer)
+2019-05-18 10:34:00:022 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:09:174 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update admin SET account = ?, age = ?, address = ?, tel = ?, idk = ? where id = ? 
+2019-05-18 10:34:09:175 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 吴帆(String), 24(String), 安徽省蚌埠市(String), 13053038996(String), 340322199511011101(String), 3(Integer)
+2019-05-18 10:34:09:178 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:34:09:198 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:34:09:199 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:34:09:201 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:09:203 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:34:09:204 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:34:09:207 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:14:331 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:34:14:332 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(String)
+2019-05-18 10:34:14:333 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:14:335 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:34:14:337 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(String), 50(Integer)
+2019-05-18 10:34:14:339 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 2
+2019-05-18 10:34:19:156 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from admin where id = ? 
+2019-05-18 10:34:19:158 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 5(Integer)
+2019-05-18 10:34:19:161 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:34:19:177 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:34:19:179 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(String)
+2019-05-18 10:34:19:181 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:19:186 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:34:19:188 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(String), 50(Integer)
+2019-05-18 10:34:19:192 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:21:544 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from admin where id = ? 
+2019-05-18 10:34:21:546 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-05-18 10:34:21:548 [cn.com.project.mapper.UserMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:34:21:571 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:34:21:573 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(String)
+2019-05-18 10:34:21:575 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:24:950 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? 
+2019-05-18 10:34:24:953 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(String)
+2019-05-18 10:34:24:954 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 0
+2019-05-18 10:34:26:711 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:34:26:712 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:26:784 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:27:321 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 10:34:27:323 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:27:324 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 0
+2019-05-18 10:34:28:787 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 10:34:28:788 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:28:837 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:29:400 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 10:34:29:401 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:29:403 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:30:777 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:34:30:778 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:30:816 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:31:854 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:34:31:855 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:31:856 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:32:492 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:34:32:493 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:32:496 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:35:052 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:34:35:054 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:35:055 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:37:078 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 10:34:37:079 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:37:107 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:37:647 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 10:34:37:648 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:37:650 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:43:675 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-05-18 10:34:43:676 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:43:678 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:46:090 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM lxr 
+2019-05-18 10:34:46:090 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:34:46:092 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:53:386 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:34:53:388 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:34:53:389 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:34:53:390 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:34:53:391 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:34:53:393 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:37:23:897 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 10:37:23:900 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 李阳(String), 1(String), 35(String), 1(String), 安徽省蚌埠市(String), 17756552658(String), 340322198801201320(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 10:37:23:902 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:37:23:930 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:37:23:931 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:37:23:934 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:37:23:937 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:37:23:939 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:37:23:941 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 2
+2019-05-18 10:37:50:226 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:37:50:227 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:37:50:229 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:37:50:230 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:37:50:231 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:37:50:234 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 2
+2019-05-18 10:48:42:660 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? 
+2019-05-18 10:48:42:662 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:48:42:665 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 2
+2019-05-18 10:49:40:025 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 10:49:40:027 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 欧杨(String), 1(String), 24(String), 1(String), 安徽省蚌埠市(String), 13055235689(String), 340322199512204212(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 10:49:40:028 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:49:40:053 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:49:40:054 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:49:40:056 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:49:40:059 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:49:40:060 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:49:40:066 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 3
+2019-05-18 10:49:47:306 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-05-18 10:49:47:307 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 7(Integer)
+2019-05-18 10:49:47:309 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:49:47:311 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin where id = ? LIMIT ? 
+2019-05-18 10:49:47:312 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 7(Integer), 10(Integer)
+2019-05-18 10:49:47:314 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:49:51:279 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update admin SET account = ?, age = ?, address = ?, tel = ?, idk = ? where id = ? 
+2019-05-18 10:49:51:281 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 欧杨(String), 33(String), 安徽省蚌埠市(String), 13055235689(String), 340322199512204212(String), 7(Integer)
+2019-05-18 10:49:51:282 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:49:51:292 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:49:51:293 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:49:51:295 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:49:51:297 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:49:51:297 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 50(Integer)
+2019-05-18 10:49:51:299 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 3
+2019-05-18 10:51:46:383 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 10:51:46:383 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 李欣(String), 1(String), 29(String), 1(String), 安徽省六安市(String), 13955435263(String), 340322198712204212(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 10:51:46:393 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:51:46:416 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:51:46:418 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:51:46:420 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:51:46:423 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:51:46:425 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:51:46:428 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 4
+2019-05-18 10:52:09:599 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin where id = ? 
+2019-05-18 10:52:09:600 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 8(Integer)
+2019-05-18 10:52:09:601 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:52:12:110 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update admin SET account = ?, age = ?, address = ?, tel = ?, idk = ? where id = ? 
+2019-05-18 10:52:12:111 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 李欣(String), 32(String), 安徽省六安市(String), 13955435263(String), 340322198712204212(String), 8(Integer)
+2019-05-18 10:52:12:113 [cn.com.project.mapper.UserMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:52:12:120 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:52:12:121 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:52:12:122 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:52:12:123 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:52:12:124 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:52:12:125 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 4
+2019-05-18 10:52:16:933 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:52:16:934 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(String)
+2019-05-18 10:52:16:936 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:52:21:989 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:52:21:990 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:52:21:992 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:52:24:085 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 10:52:24:086 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:52:24:087 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:52:24:968 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-05-18 10:52:24:969 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:52:24:970 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 0
+2019-05-18 10:52:28:338 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:52:28:340 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:52:28:341 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:35:412 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into gonggao ( title, content, fname, fdate ) values ( ?, ?, ?, ? ) 
+2019-05-18 10:54:35:413 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==> Parameters: 召开第五届“互联网+”大学生创新创业大赛启动会(String), 5月15日下午，皖西学院在教学楼106召开了第五届“互联网+”大学生创新创业大赛启动会。党委副书记、校长刘学忠，校党委委员、副校长孔敏，校办公室、宣传部、教务处、科技处、学生处、团委负责人，二级学院党政主要负责人、分管学科竞赛领导，参赛项目团队师生代表共300多人参加了启动会。启动会由孔敏主持。(String), admin(String), 2019-05-18 10:54:35(String)
+2019-05-18 10:54:35:415 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:54:35:426 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:54:35:426 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:54:35:436 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:35:436 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 10:54:35:439 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 10:54:35:441 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:42:919 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao WHERE id = ? 
+2019-05-18 10:54:42:920 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 10:54:42:922 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:42:925 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao where id = ? LIMIT ? 
+2019-05-18 10:54:42:926 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer), 10(Integer)
+2019-05-18 10:54:42:928 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:45:743 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update gonggao SET title = ?, content = ? where id = ? 
+2019-05-18 10:54:45:744 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 召开第五届“互联网+”大学生创新创业大赛启动会(String), 5月15日下午，皖西学院在教学楼106召开了第五届“互联网+”大学生创新创业大赛启动会。党委副书记、校长刘学忠，校党委委员、副校长孔敏，校办公室、宣传部、教务处、科技处、学生处、团委负责人，二级学院党政主要负责人、分管学科竞赛领导，参赛项目团队师生代表共300多人参加了启动会。启动会由孔敏主持。(String), 1(Integer)
+2019-05-18 10:54:45:745 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:54:45:752 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 10:54:45:753 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:54:45:754 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:54:52:575 [cn.com.project.mapper.GonggaoMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from gonggao where id = ? 
+2019-05-18 10:54:52:576 [cn.com.project.mapper.GonggaoMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 10:54:52:577 [cn.com.project.mapper.GonggaoMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:54:52:587 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:54:52:587 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:54:52:589 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:55:17:637 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into gonggao ( title, content, fname, fdate ) values ( ?, ?, ?, ? ) 
+2019-05-18 10:55:17:639 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==> Parameters: 召开第五届“互联网+”大学生创新创业大赛启动会(String), 5月15日下午，皖西学院在教学楼106召开了第五届“互联网+”大学生创新创业大赛启动会。党委副书记、校长刘学忠，校党委委员、副校长孔敏，校办公室、宣传部、教务处、科技处、学生处、团委负责人，二级学院党政主要负责人、分管学科竞赛领导，参赛项目团队师生代表共300多人参加了启动会。启动会由孔敏主持。(String), admin(String), 2019-05-18 10:55:17(String)
+2019-05-18 10:55:17:641 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:55:17:650 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:55:17:651 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:55:17:651 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:55:17:651 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 10:55:17:651 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 10:55:17:651 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:55:19:459 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 10:55:19:460 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:55:19:462 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:02:894 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:56:02:895 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:56:02:897 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:03:619 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 10:56:03:620 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:56:03:622 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:05:251 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 10:56:05:252 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:56:05:256 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:19:462 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-05-18 10:56:19:462 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:56:19:464 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:19:465 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? LIMIT ? 
+2019-05-18 10:56:19:467 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-05-18 10:56:19:468 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 4
+2019-05-18 10:56:23:232 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE role = ? 
+2019-05-18 10:56:23:233 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-05-18 10:56:23:235 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 4
+2019-05-18 10:56:52:200 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 10:56:52:200 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 吴帆(String), 1(String)
+2019-05-18 10:56:52:202 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:56:52:205 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 10:56:52:207 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 吴帆(String), 2019-05-18 10:56:52(String), 10.130.56.61(String)
+2019-05-18 10:56:52:209 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:57:22:007 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 10:57:22:010 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 10:57:22:012 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:57:22:015 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 10:57:22:016 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 10:57:22:017 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:57:44:432 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 10:57:44:433 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-18 10:57:44:435 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:57:44:437 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 10:57:44:438 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-05-18 10:57:44:440 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:57:44:444 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 10:57:44:444 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-18 10:57:44(String), 10.130.56.61(String)
+2019-05-18 10:57:44:444 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 10:59:47:379 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 10:59:47:380 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-18 10:59:47:381 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:59:47:383 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 10:59:47:383 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-05-18 10:59:47:383 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 10:59:47:383 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 10:59:47:383 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-18 10:59:47(String), 10.130.56.61(String)
+2019-05-18 10:59:47:383 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:00:34:782 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:00:34:783 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:00:34:784 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:00:34:786 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:00:34:787 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:00:34:788 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:00:37:741 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao WHERE id = ? 
+2019-05-18 11:00:37:743 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:00:37:744 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:00:37:747 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao where id = ? LIMIT ? 
+2019-05-18 11:00:37:748 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-05-18 11:00:37:750 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:03:58:735 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-05-18 11:03:58:736 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:03:58:737 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 0
+2019-05-18 11:04:47:880 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:04:47:882 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 深入理解新发展理念(String), 创新、协调、绿色、开放、共享的发展理念，我在党的十八届五中全会和其他场合已经讲了不少，今天不从抓工作的角度全面讲了，而是结合历史和现实，结合一些重大问题，从理论上、宏观上讲讲。
+
+　　第一，着力实施创新驱动发展战略。把创新摆在第一位，是因为创新是引领发展的第一动力。发展动力决定发展速度、效能、可持续性。对我国这么大体量的经济体来讲，如果动力问题解决不好，要实现经济持续健康发展和“两个翻番”是难以做到的。当然，协调发展、绿色发展、开放发展、共享发展都有利于增强发展动力，但核心在创新。抓住了创新，就抓住了牵动经济社会发展全局的“牛鼻子”。(String), admin(String), 2019-05-18 11:04:47(String), 长消息(String)
+2019-05-18 11:04:54:556 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:04:54:557 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:04:54:558 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:05:03:614 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:05:03:616 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 啊啊啊(String), 啊啊啊啊啊啊啊啊(String), admin(String), 2019-05-18 11:05:03(String), 简明消息(String)
+2019-05-18 11:05:03:617 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:05:03:628 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:05:06:640 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message where id = ? 
+2019-05-18 11:05:06:641 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 11:05:06:642 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:07:01:819 [cn.com.project.mapper.MessageMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update message SET title = ?, content = ?, lx = ? where id = ? 
+2019-05-18 11:07:01:820 [cn.com.project.mapper.MessageMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 系统错误(String), 近期由于网络问题导致系统错误问题已经排查解决，请大家放心使用。(String), 简明消息(String), 1(Integer)
+2019-05-18 11:07:01:822 [cn.com.project.mapper.MessageMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:07:01:823 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-05-18 11:07:01:823 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:07:01:833 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:07:25:773 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:07:25:775 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:07:25:777 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:07:25:779 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:07:25:780 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:07:25:782 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:07:41:061 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-05-18 11:07:41:062 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:07:41:063 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:09:18:775 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:09:18:777 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 关于2018年第二学期高层次人才科研启动经费资助项目评审结果的公示(String), 根据《皖西学院高层次人才科研启动经费管理暂行办法》（院发〔2017〕135号）文件精神，经个人申请、基层单位评议推荐、校职称评聘与师资建设委员会专家评审(String), admin(String), 2019-05-18 11:09:18(String), 长消息(String)
+2019-05-18 11:09:18:781 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:09:18:792 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:09:18:793 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:09:18:796 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:09:18:796 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:09:18:796 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:09:18:796 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 11:09:31:396 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message WHERE id = ? 
+2019-05-18 11:09:31:398 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:09:31:400 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:09:31:402 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message where id = ? LIMIT ? 
+2019-05-18 11:09:31:402 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-05-18 11:09:31:403 [cn.com.project.mapper.MessageMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:09:36:441 [cn.com.project.mapper.MessageMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from message where id = ? 
+2019-05-18 11:09:36:442 [cn.com.project.mapper.MessageMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:09:36:443 [cn.com.project.mapper.MessageMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:09:36:450 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:09:36:450 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:09:36:451 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:09:36:452 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:09:36:453 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:09:36:454 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:10:11:166 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:10:11:168 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 项目评审结果(String), 现将我校2018年第二学期高层次人才科研启动经费资助项目评审结果予以公示(String), admin(String), 2019-05-18 11:10:11(String), 长消息(String)
+2019-05-18 11:10:11:169 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:10:11:176 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:10:11:176 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:10:11:177 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:10:11:179 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:10:11:180 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:10:11:181 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 11:10:54:855 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:10:54:856 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 素质拓展活动招募(String), 活动主题：团队建设
+
+活动形式：户外素质拓展
+
+招募对象：渴望加强团队意识的同学(String), admin(String), 2019-05-18 11:10:54(String), 短消息(String)
+2019-05-18 11:10:54:857 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:10:54:866 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:10:54:866 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:10:54:869 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:10:54:869 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:10:54:869 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:10:54:869 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:12:10:392 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:12:10:394 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:12:10:395 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:10:397 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:12:10:398 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:12:10:399 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:14:472 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao where id = ? 
+2019-05-18 11:12:14:473 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:12:14:476 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:36:578 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update gonggao SET title = ?, content = ? where id = ? 
+2019-05-18 11:12:36:580 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 召开“互联网+”创新创业大赛(String), 5月15日下午，皖西学院在教学楼106召开了第五届“互联网+”大学生创新创业大赛启动会。党委副书记、校长刘学忠，校党委委员、副校长孔敏。(String), 2(Integer)
+2019-05-18 11:12:36:582 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:12:36:591 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:12:36:592 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:12:36:593 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:36:595 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:12:36:595 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:12:36:596 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:44:386 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao WHERE id = ? 
+2019-05-18 11:12:44:386 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:12:44:392 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:44:395 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao where id = ? LIMIT ? 
+2019-05-18 11:12:44:396 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-05-18 11:12:44:397 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:55:852 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update gonggao SET title = ?, content = ? where id = ? 
+2019-05-18 11:12:55:853 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 召开“互联网+”创新创业大(String), 5月15日下午，皖西学院在教学楼106召开了第五届“互联网+”大学生创新创业大赛启动会。(String), 2(Integer)
+2019-05-18 11:12:55:854 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:12:55:862 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:12:55:862 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:12:55:863 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:12:55:865 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:12:55:865 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:12:55:866 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:13:34:127 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into gonggao ( title, content, fname, fdate ) values ( ?, ?, ?, ? ) 
+2019-05-18 11:13:34:128 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==> Parameters: 调研红色文化建设(String), 5月15日，校党委委员、副校长杨成升率队赴临沂大学调研红色文化建设(String), admin(String), 2019-05-18 11:13:34(String)
+2019-05-18 11:13:34:129 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:13:34:137 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:13:34:138 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:13:34:139 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:13:34:142 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:13:34:143 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:13:34:144 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 11:14:03:588 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into gonggao ( title, content, fname, fdate ) values ( ?, ?, ?, ? ) 
+2019-05-18 11:14:03:589 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==> Parameters: 召开图书馆用人动员会(String), (String), admin(String), 2019-05-18 11:14:03(String)
+2019-05-18 11:14:03:590 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:14:03:598 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 11:14:03:599 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:14:03:602 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:14:05:979 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao WHERE id = ? 
+2019-05-18 11:14:05:980 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-05-18 11:14:05:981 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:14:05:982 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao where id = ? LIMIT ? 
+2019-05-18 11:14:05:983 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer), 10(Integer)
+2019-05-18 11:14:05:984 [cn.com.project.mapper.GonggaoMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:14:14:276 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update gonggao SET title = ?, content = ? where id = ? 
+2019-05-18 11:14:14:277 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 召开图书馆用人动员会(String), 校图书馆用人制度改革工作组在图书馆会议室召开了图书馆部门负责人聘任与员工轮岗工作动员会(String), 4(Integer)
+2019-05-18 11:14:14:278 [cn.com.project.mapper.GonggaoMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:14:14:285 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:14:14:286 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:14:14:287 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:14:14:289 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:14:14:290 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:14:14:292 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:16:32:636 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:16:32:641 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 李明(String), 1(String), 24(String), 2(String), 安徽省六安市(String), 13022356412(String), 340322199512204212(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 11:16:32:641 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:16:43:175 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 11:16:43:177 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: 李明(String), 1(String)
+2019-05-18 11:16:43:178 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:16:43:180 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 11:16:43:181 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明(String), 1(String), 10(Integer)
+2019-05-18 11:16:43:183 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:16:43:188 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:16:43:190 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 李明(String), 2019-05-18 11:16:43(String), 10.130.56.61(String)
+2019-05-18 11:16:43:192 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:16:47:293 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 11:16:47:294 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:16:47:296 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:17:00:271 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE id=? 
+2019-05-18 11:17:00:273 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:17:00:274 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:00:883 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx , photo from admin WHERE id=? 
+2019-05-18 11:17:00:884 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:17:00:886 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:03:348 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 11:17:03:350 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:17:03:352 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:17:04:628 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:17:04:629 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:17:04:630 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:07:383 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:17:07:385 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:17:07:389 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:35:241 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into order1 ( aid, ddrq, remarks, state, money, xm ) values ( ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:17:35:243 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==> Parameters: 9(Integer), 2019-05-18(String), (String), 0(String), 2000(String), 课题研究经费管理李彤的开发(String)
+2019-05-18 11:17:35:244 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:17:35:257 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:17:35:257 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:17:35:257 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:35:257 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:17:35:257 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:17:35:267 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:40:459 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.id = ? 
+2019-05-18 11:17:40:460 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 11:17:40:461 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:40:463 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? LIMIT ? 
+2019-05-18 11:17:40:463 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer), 10(Integer)
+2019-05-18 11:17:40:465 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:46:583 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET remarks = ?, money = ? xm = ?, where id = ? 
+2019-05-18 11:17:46:585 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: (String), 2000(String), 课题研究经费管理系统的开发(String), 1(Integer)
+2019-05-18 11:17:50:932 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:17:50:934 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:17:50:934 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:50:937 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:17:50:938 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:17:50:939 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:53:267 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.id = ? 
+2019-05-18 11:17:53:268 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 11:17:53:269 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:17:53:272 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? LIMIT ? 
+2019-05-18 11:17:53:273 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer), 10(Integer)
+2019-05-18 11:17:53:274 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:18:00:789 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET remarks = ?, money = ? xm = ?, where id = ? 
+2019-05-18 11:18:00:790 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: (String), 2000(String), 课题研究经费管理系统的开发(String), 1(Integer)
+2019-05-18 11:18:04:901 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:18:04:902 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:18:04:903 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:18:04:905 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:18:04:905 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:18:04:907 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:18:06:479 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from order1 where id = ? 
+2019-05-18 11:18:06:480 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-05-18 11:18:06:481 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:18:06:487 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:18:06:487 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:18:06:489 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:18:23:135 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into order1 ( aid, ddrq, remarks, state, money, xm ) values ( ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:18:23:137 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==> Parameters: 9(Integer), 2019-05-18(String), (String), 0(String), 2000(String), 课题研究经费管理系统的开发(String)
+2019-05-18 11:18:23:139 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:18:23:148 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:18:23:149 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:18:23:151 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:18:23:153 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:18:23:154 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:18:23:156 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:19:27:745 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:19:27:745 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 李明依(String), 1(String), 25(String), 2(String), 安徽省黄山市(String), 13055265462(String), 340322199512204212(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 11:19:27:745 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:19:36:787 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 11:19:36:788 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明依(String), 1(String)
+2019-05-18 11:19:36:790 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:19:36:794 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:19:36:795 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 李明依(String), 2019-05-18 11:19:36(String), 10.130.56.61(String)
+2019-05-18 11:19:36:796 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:19:39:239 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:19:39:240 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:19:39:242 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:20:05:982 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into order1 ( aid, ddrq, remarks, state, money, xm ) values ( ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:20:05:984 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==> Parameters: 10(Integer), 2019-01-02(String), (String), 0(String), 3300(String), 关于材料的进一步研究(String)
+2019-05-18 11:20:05:985 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:20:05:993 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? 
+2019-05-18 11:20:05:994 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:20:05:995 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:20:16:507 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:20:16:508 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:20:16:509 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:20:23:212 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 11:20:23:213 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:20:23:214 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:21:11:702 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo,yx ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:21:11:705 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, 刘飞(String), 1(String), 35(String), 2(String), 安徽省合肥市(String), 15543657689(String), 340322199512204212(String), 0(String), [B@b4e26e3(byte[]), null
+2019-05-18 11:21:11:706 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:21:19:921 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 11:21:19:922 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 刘飞(String), 1(String)
+2019-05-18 11:21:19:924 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:19:927 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:21:19:928 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 刘飞(String), 2019-05-18 11:21:19(String), 10.130.56.61(String)
+2019-05-18 11:21:19:929 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:21:22:578 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:21:22:579 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 11(Integer)
+2019-05-18 11:21:22:581 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:43:816 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into order1 ( aid, ddrq, remarks, state, money, xm ) values ( ?, ?, ?, ?, ?, ? ) 
+2019-05-18 11:21:43:818 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==> Parameters: 11(Integer), 2017-05-23(String), (String), 0(String), 5000(String), 关于体育项目的研究(String)
+2019-05-18 11:21:43:819 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:21:43:828 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:21:43:829 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 11(Integer)
+2019-05-18 11:21:43:830 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:43:831 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:21:43:832 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 11(Integer), 10(Integer)
+2019-05-18 11:21:43:834 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:59:260 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 11:21:59:261 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-18 11:21:59:262 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:59:263 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 11:21:59:264 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-05-18 11:21:59:265 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:21:59:268 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:21:59:269 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-18 11:21:59(String), 10.130.56.61(String)
+2019-05-18 11:21:59:270 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:22:01:920 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 11:22:01:921 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:22:01:923 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:01:925 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id LIMIT ? 
+2019-05-18 11:22:01:926 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:22:01:928 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:22:03:921 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.id = ? 
+2019-05-18 11:22:03:922 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:22:03:924 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:03:925 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? LIMIT ? 
+2019-05-18 11:22:03:926 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-05-18 11:22:03:927 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:08:961 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? 
+2019-05-18 11:22:08:962 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-05-18 11:22:08:963 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:11:606 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET state = ? where id = ? 
+2019-05-18 11:22:11:607 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 2000(String), 2(Integer)
+2019-05-18 11:22:11:608 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:22:11:618 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 11:22:11:619 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:22:11:621 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:11:621 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id LIMIT ? 
+2019-05-18 11:22:11:621 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:22:11:621 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:22:13:775 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.id = ? 
+2019-05-18 11:22:13:776 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-05-18 11:22:13:776 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:13:778 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? LIMIT ? 
+2019-05-18 11:22:13:779 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer), 10(Integer)
+2019-05-18 11:22:13:780 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:16:356 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET state = ? where id = ? 
+2019-05-18 11:22:16:356 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 3000(String), 3(Integer)
+2019-05-18 11:22:16:358 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:22:16:364 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-18 11:22:16:366 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:22:16:368 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:22:17:802 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? 
+2019-05-18 11:22:17:802 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-05-18 11:22:17:804 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:22:900 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET state = ? where id = ? 
+2019-05-18 11:22:22:901 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 5000(String), 4(Integer)
+2019-05-18 11:22:22:903 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:22:22:910 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 11:22:22:911 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:22:22:912 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:22:913 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id LIMIT ? 
+2019-05-18 11:22:22:914 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:22:22:915 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:22:24:329 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id where o.id = ? 
+2019-05-18 11:22:24:329 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-05-18 11:22:24:330 [cn.com.project.mapper.OrderMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:22:29:643 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==>  Preparing: update order1 SET state = ? where id = ? 
+2019-05-18 11:22:29:644 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] ==> Parameters: 3300(String), 3(Integer)
+2019-05-18 11:22:29:645 [cn.com.project.mapper.OrderMapper.updateByPrimaryKeySelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:22:29:652 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-18 11:22:29:652 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:22:29:654 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:23:59:004 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 11:23:59:005 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 吴帆(String), 1(String)
+2019-05-18 11:23:59:007 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:23:59:010 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:23:59:011 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 吴帆(String), 2019-05-18 11:23:59(String), 10.130.56.61(String)
+2019-05-18 11:23:59:012 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:24:01:926 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-05-18 11:24:01:927 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:24:01:929 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:24:01:930 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message LIMIT ? 
+2019-05-18 11:24:01:931 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:24:01:934 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:24:03:130 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-05-18 11:24:03:131 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:24:03:133 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:24:04:090 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:24:04:090 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:24:04:091 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:24:04:092 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:24:04:093 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:24:04:094 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:24:11:085 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-05-18 11:24:11:086 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:24:11:087 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:25:16:514 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-05-18 11:25:16:516 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:25:16:520 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 0
+2019-05-18 11:25:42:322 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into qtgs ( gsmc, cjsl, cjje, lname, lrsj ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:25:42:323 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==> Parameters: 关于系统的开发(String), 5000(String), (String), 吴帆(String), 2019-05-18 11:25:42(String)
+2019-05-18 11:25:42:325 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:25:42:336 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:25:42:337 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:25:42:338 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:25:42:339 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:25:42:340 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:25:42:342 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:00:828 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 11:27:00:829 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: 李明(String), 1(String)
+2019-05-18 11:27:00:831 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:00:833 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 11:27:00:833 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明(String), 1(String), 10(Integer)
+2019-05-18 11:27:00:835 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:00:839 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:27:00:840 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 李明(String), 2019-05-18 11:27:00(String), 10.130.56.61(String)
+2019-05-18 11:27:00:841 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:27:06:583 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-05-18 11:27:06:584 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:27:06:585 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:06:587 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-05-18 11:27:06:588 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:27:06:589 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:27:41:557 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:27:41:558 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:27:41:559 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:41:561 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:27:41:562 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:27:41:563 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:43:710 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:27:43:711 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:27:43:712 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:43:714 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:27:43:715 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:27:43:716 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:51:158 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:27:51:159 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:27:51:160 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:27:51:161 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:27:51:162 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:27:51:163 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:26:583 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:28:26:584 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:28:26:585 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:26:588 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:28:26:589 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:28:26:590 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:28:549 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:28:28:550 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:28:28:551 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:28:552 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:28:28:552 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:28:28:553 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:32:261 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:28:32:262 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:28:32:263 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:32:264 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:28:32:265 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:28:32:266 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:33:879 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:28:33:879 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:28:33:881 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:33:883 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:28:33:884 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:28:33:885 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:28:35:835 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-05-18 11:28:35:836 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:28:35:837 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:10:728 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:29:10:729 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:29:10:730 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:10:731 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:29:10:733 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:29:10:734 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:17:062 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:29:17:063 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:29:17:064 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:17:065 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:29:17:066 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:29:17:067 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:28:818 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 11:29:28:819 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: 吴帆(String), 1(String)
+2019-05-18 11:29:28:820 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:28:821 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 11:29:28:822 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 吴帆(String), 1(String), 10(Integer)
+2019-05-18 11:29:28:823 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:28:826 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:29:28:827 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 吴帆(String), 2019-05-18 11:29:28(String), 10.130.56.61(String)
+2019-05-18 11:29:28:828 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:29:30:750 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id 
+2019-05-18 11:29:30:750 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:29:30:752 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:30:754 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id LIMIT ? 
+2019-05-18 11:29:30:755 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:29:30:757 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:29:33:605 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:29:33:606 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:29:33:607 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:29:33:609 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:29:33:610 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:29:33:612 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:02:248 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into qtgs ( gsmc, cjsl, cjje, lname, lrsj ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:30:02:250 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==> Parameters: 关于报告的进一步研究(String), 4000(String), (String), 吴帆(String), 2019-05-18 11:30:02(String)
+2019-05-18 11:30:02:253 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:30:02:260 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:30:02:260 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:30:02:261 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:02:263 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:30:02:264 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:30:02:266 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 11:30:18:749 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-05-18 11:30:18:750 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: 欧杨(String), 1(String)
+2019-05-18 11:30:18:752 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:18:753 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? LIMIT ? 
+2019-05-18 11:30:18:754 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 欧杨(String), 1(String), 10(Integer)
+2019-05-18 11:30:18:756 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:18:758 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:30:18:759 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 欧杨(String), 2019-05-18 11:30:18(String), 10.130.56.61(String)
+2019-05-18 11:30:18:760 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:30:20:733 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id 
+2019-05-18 11:30:20:734 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:30:20:735 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:30:22:420 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-05-18 11:30:22:421 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:30:22:422 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 2
+2019-05-18 11:30:46:473 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into qtgs ( gsmc, cjsl, cjje, lname, lrsj ) values ( ?, ?, ?, ?, ? ) 
+2019-05-18 11:30:46:474 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==> Parameters: 有关材料的深层研究(String), 8000(String), (String), 欧杨(String), 2019-05-18 11:30:46(String)
+2019-05-18 11:30:46:476 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:30:46:483 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:30:46:483 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:30:46:484 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:46:485 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:30:46:486 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:30:46:488 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:30:56:097 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-18 11:30:56:099 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: 李明(String), 1(String)
+2019-05-18 11:30:56:101 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:56:103 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-18 11:30:56:105 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: 李明(String), 2019-05-18 11:30:56(String), 10.130.56.61(String)
+2019-05-18 11:30:56:106 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-18 11:30:58:705 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:30:58:707 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:30:58:707 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:58:709 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:30:58:710 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:30:58:711 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:59:740 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:30:59:741 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:30:59:743 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:30:59:745 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:30:59:746 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:30:59:750 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:31:32:155 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN admin a ON o.aid = a.id WHERE o.aid = ? 
+2019-05-18 11:31:32:156 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:31:32:157 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:31:32:159 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? LIMIT ? 
+2019-05-18 11:31:32:160 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer), 10(Integer)
+2019-05-18 11:31:32:161 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:33:12:850 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-05-18 11:33:12:852 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-05-18 11:33:12:854 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-05-18 11:33:12:855 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-05-18 11:33:12:857 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-05-18 11:33:12:859 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 3
+2019-05-18 11:33:40:518 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,a.account, o.xm from order1 o left join admin a on o.aid = a.id WHERE o.aid=? 
+2019-05-18 11:33:40:519 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 9(Integer)
+2019-05-18 11:33:40:521 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1

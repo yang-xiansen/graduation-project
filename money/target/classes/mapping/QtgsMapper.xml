@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.project.mapper.QtgsMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.project.domain.Qtgs" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="gsmc" property="gsmc" jdbcType="VARCHAR" />
+    <result column="cjsl" property="cjsl" jdbcType="VARCHAR" />
+    <result column="cjje" property="cjje" jdbcType="VARCHAR" />
+    <result column="lname" property="lname" jdbcType="VARCHAR" />
+    <result column="lrsj" property="lrsj" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, gsmc, cjsl, cjje, lname, lrsj
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from qtgs
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+   <select id="select" resultMap="BaseResultMap" parameterType="cn.com.project.domain.Qtgs" >
+    select 
+    <include refid="Base_Column_List" />
+    from qtgs
+     <where>
+           <if test="gsmc !=null and gsmc !=''">
+            and gsmc=#{gsmc}
+           </if>
+      </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from qtgs
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.com.project.domain.Qtgs" >
+    insert into qtgs (id, gsmc, cjsl, 
+      cjje, lname, lrsj)
+    values (#{id,jdbcType=INTEGER}, #{gsmc,jdbcType=VARCHAR}, #{cjsl,jdbcType=VARCHAR}, 
+      #{cjje,jdbcType=VARCHAR}, #{lname,jdbcType=VARCHAR}, #{lrsj,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.project.domain.Qtgs" >
+    insert into qtgs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="gsmc != null" >
+        gsmc,
+      </if>
+      <if test="cjsl != null" >
+        cjsl,
+      </if>
+      <if test="cjje != null" >
+        cjje,
+      </if>
+      <if test="lname != null" >
+        lname,
+      </if>
+      <if test="lrsj != null" >
+        lrsj,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="gsmc != null" >
+        #{gsmc,jdbcType=VARCHAR},
+      </if>
+      <if test="cjsl != null" >
+        #{cjsl,jdbcType=VARCHAR},
+      </if>
+      <if test="cjje != null" >
+        #{cjje,jdbcType=VARCHAR},
+      </if>
+      <if test="lname != null" >
+        #{lname,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        #{lrsj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.project.domain.Qtgs" >
+    update qtgs
+    <set >
+      <if test="gsmc != null" >
+        gsmc = #{gsmc,jdbcType=VARCHAR},
+      </if>
+      <if test="cjsl != null" >
+        cjsl = #{cjsl,jdbcType=VARCHAR},
+      </if>
+      <if test="cjje != null" >
+        cjje = #{cjje,jdbcType=VARCHAR},
+      </if>
+      <if test="lname != null" >
+        lname = #{lname,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        lrsj = #{lrsj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.project.domain.Qtgs" >
+    update qtgs
+    set gsmc = #{gsmc,jdbcType=VARCHAR},
+      cjsl = #{cjsl,jdbcType=VARCHAR},
+      cjje = #{cjje,jdbcType=VARCHAR},
+      lname = #{lname,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

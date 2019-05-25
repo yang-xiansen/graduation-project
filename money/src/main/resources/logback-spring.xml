@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <springProperty scope="context" name="logDir" source="logging.path" defaultValue="logs/money"/>
+    <springProperty scope="context" name="appName" source="logging.name" defaultValue="money"/>
+    <springProperty scope="context" name="logLevelRoot" source="logging.level.root" defaultValue="info"/>
+
+    <appender name="consoleOut" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n
+            </pattern>
+        </encoder>
+    </appender>
+    <appender name="stdoutFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logDir}/${appName}_stdout.log</File>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>ERROR</level>  
+            <onMatch>DENY</onMatch>  
+            <onMismatch>ACCEPT</onMismatch>  
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} [%c:%L]-[%p] %m%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDir}/${appName}_stdout.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <appender name="errorFile"    class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logDir}/${appName}_stderr.log</File>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>ERROR</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} [%c:%L]-[%p] %m%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDir}/${appName}_stderr.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <appender name="sqlFile"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logDir}/${appName}_jdbc.log</File>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} [%c:%L]-[%p] %m%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDir}/${appName}_jdbc.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+
+    <logger name="org.springframework" level="error" />
+    <logger name="org.quartz" level="error" />
+    <logger name="org.apache" level="error" />
+    <logger name="com.netflix" level="error" />
+    <logger name="cn.com" level="${logLevelRoot}" />
+
+
+    <!-- sql -->
+    <logger name="org.mybatis" level="${logLevelRoot}" >
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <logger name="java.sql.Connection" level="${logLevelRoot}" >
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <logger name="java.sql.Statement" level="${logLevelRoot}" >
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <logger name="java.sql.PreparedStatement" level="${logLevelRoot}" >
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <logger name="java.sql.ResultSet" level="${logLevelRoot}" >
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <logger name="jdbc.sqltiming" level="${logLevelRoot}">
+        <appender-ref ref="sqlFile" />
+    </logger>
+     <logger name="cn.com.project.mapper" level="DEBUG">
+        <appender-ref ref="sqlFile" />
+    </logger>
+    <root level="${logLevelRoot}">
+        <appender-ref ref="consoleOut" />
+        <appender-ref ref="stdoutFile" />
+        <appender-ref ref="errorFile" />
+    </root>
+</configuration>

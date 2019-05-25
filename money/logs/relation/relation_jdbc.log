@@ -1,0 +1,564 @@
+2019-03-27 21:36:00:630 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-27 21:36:00:771 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:36:00:869 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:36:01:210 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:36:01:215 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:36:00(String), 192.168.1.109(String)
+2019-03-27 21:36:01:337 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:36:10:144 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-03-27 21:36:10:147 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:10:154 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:36:13:065 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==>  Preparing: select id, name, tel, content from lxr 
+2019-03-27 21:36:13:069 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:13:119 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:36:34:274 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? 
+2019-03-27 21:36:34:276 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:36:34:284 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:36:38:182 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-03-27 21:36:38:184 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:38:278 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:36:41:320 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-03-27 21:36:41:324 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:41:365 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:36:44:126 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==>  Preparing: select s.id, s.title, s.content, s.zxrq, s.aid,a.account from schedule s left join admin a on s.aid = a.id 
+2019-03-27 21:36:44:129 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:44:165 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:36:48:550 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:36:48:553 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:48:622 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:36:52:763 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id 
+2019-03-27 21:36:52:766 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:52:820 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 3
+2019-03-27 21:36:56:653 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from order1 where id = ? 
+2019-03-27 21:36:56:655 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-03-27 21:36:56:684 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:36:56:892 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:36:56:894 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:56:903 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:36:56:908 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id LIMIT ? 
+2019-03-27 21:36:56:912 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-03-27 21:36:56:926 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:36:57:666 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from order1 where id = ? 
+2019-03-27 21:36:57:668 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:36:57:677 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:36:57:709 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id 
+2019-03-27 21:36:57:712 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:57:719 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:36:58:420 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from order1 where id = ? 
+2019-03-27 21:36:58:426 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-03-27 21:36:58:436 [cn.com.project.mapper.OrderMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:36:58:482 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:36:58:485 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:36:58:628 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:00:177 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:37:00:180 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:00:188 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:00:194 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:37:00:198 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:37:00:210 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 4
+2019-03-27 21:37:05:762 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from diaocha where id = ? 
+2019-03-27 21:37:05:764 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-03-27 21:37:05:786 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:37:05:811 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:37:05:812 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:05:826 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:05:831 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:37:05:832 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:37:06:277 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 3
+2019-03-27 21:37:06:970 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from diaocha where id = ? 
+2019-03-27 21:37:06:972 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:37:06:980 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:37:06:992 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id 
+2019-03-27 21:37:06:994 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:07:001 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:37:07:675 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from diaocha where id = ? 
+2019-03-27 21:37:07:677 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-03-27 21:37:07:683 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:37:07:702 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:37:07:704 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:07:709 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:07:713 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:37:07:715 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:37:07:722 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:08:432 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from diaocha where id = ? 
+2019-03-27 21:37:08:434 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-03-27 21:37:08:475 [cn.com.project.mapper.DiaochaMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:37:08:531 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:37:08:533 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:08:637 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:12:774 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:37:12:776 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:12:781 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:14:411 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM (SELECT count(*) AS number, mycd FROM diaocha GROUP BY mycd) table_count 
+2019-03-27 21:37:14:412 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:14:427 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:37:21:261 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id 
+2019-03-27 21:37:21:265 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:37:21:276 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:38:26:576 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:38:26:579 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:38:26:586 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:38:26:589 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:38:26:592 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-03-27 21:38:26:609 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:38:26:623 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:38:26:628 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:38:26(String), 192.168.1.109(String)
+2019-03-27 21:38:26:655 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:38:54:320 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:38:54:322 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:38:54:331 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:38:54:336 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-03-27 21:38:54:340 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:38:54:350 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 3
+2019-03-27 21:39:05:930 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from qtgs where id = ? 
+2019-03-27 21:39:05:933 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-03-27 21:39:06:058 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:39:06:091 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:39:06:093 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:39:06:099 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:39:06:104 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-03-27 21:39:06:106 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:39:06:127 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:39:06:995 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from qtgs where id = ? 
+2019-03-27 21:39:06:999 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:39:07:054 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:39:07:074 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:39:07:076 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:39:07:081 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:39:07:086 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-03-27 21:39:07:088 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:39:07:094 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:39:07:674 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from qtgs where id = ? 
+2019-03-27 21:39:07:678 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-03-27 21:39:07:687 [cn.com.project.mapper.QtgsMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:39:07:704 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-03-27 21:39:07:707 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:39:07:718 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:41:16:585 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:41:16:588 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:41:16:598 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:41:16:600 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:41:16:604 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-03-27 21:41:16:613 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:41:16:622 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:41:16:631 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:41:16(String), 192.168.1.109(String)
+2019-03-27 21:41:16:664 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:41:19:027 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-03-27 21:41:19:030 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:41:19:043 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:41:22:710 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:41:22:713 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:41:22:720 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:42:30:539 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:42:30:541 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:42:30:550 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:45:18:740 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-27 21:45:18:758 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:45:18:778 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:45:18:800 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:45:18:803 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:45:18(String), 192.168.1.109(String)
+2019-03-27 21:45:18:812 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:45:26:864 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-03-27 21:45:26:869 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:26:878 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 4
+2019-03-27 21:45:28:870 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==>  Preparing: select id, name, tel, content from lxr 
+2019-03-27 21:45:28:872 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:29:011 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:45:31:724 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? 
+2019-03-27 21:45:31:727 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:45:31:745 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:45:33:684 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-03-27 21:45:33:688 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:33:761 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:45:35:667 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-03-27 21:45:35:669 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:35:677 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:45:37:408 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==>  Preparing: select s.id, s.title, s.content, s.zxrq, s.aid,a.account from schedule s left join admin a on s.aid = a.id 
+2019-03-27 21:45:37:410 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:37:417 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:45:39:263 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:45:39:266 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:39:277 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:45:40:617 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:45:40:619 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:40:624 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:45:42:538 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id 
+2019-03-27 21:45:42:540 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:45:42:545 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:47:03:033 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:47:03:035 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:03:041 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:47:05:365 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:47:05:369 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:05:376 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:47:18:266 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:47:18:269 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:18:276 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:47:20:530 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:47:20:532 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:20:549 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:47:43:964 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:47:43:965 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:43:972 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:47:50:915 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:47:50:917 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:47:50:942 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:03:264 [cn.com.project.mapper.KhMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into kh ( kname, bianhao, lxr, dz, khjb ) values ( ?, ?, ?, ?, ? ) 
+2019-03-27 21:48:03:267 [cn.com.project.mapper.KhMapper.insertSelective:159]-[DEBUG] ==> Parameters: 测试(String), 24181057(String), 15886452301(String), 测试地址(String), 潜在用户(String)
+2019-03-27 21:48:03:303 [cn.com.project.mapper.KhMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:48:03:358 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:48:03:360 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:03:373 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:03:379 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh LIMIT ? 
+2019-03-27 21:48:03:387 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:48:03:397 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:15:337 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM schedule s LEFT JOIN admin a ON s.aid = a.id 
+2019-03-27 21:48:15:339 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:15:347 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:16:586 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-03-27 21:48:16:588 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:16:594 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:17:671 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-03-27 21:48:17:674 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:17:686 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:20:819 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM schedule s LEFT JOIN admin a ON s.aid = a.id 
+2019-03-27 21:48:20:821 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:20:834 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:21:823 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:48:21:826 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:21:833 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:23:052 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:48:23:053 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:23:059 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:48:24:769 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-03-27 21:48:24:773 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:24:781 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:48:27:641 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:48:27:644 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:48:27:650 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:16:375 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:49:16:377 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:49:16:390 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:18:721 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:49:18:722 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:49:18:732 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:18:736 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh LIMIT ? 
+2019-03-27 21:49:18:737 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:49:18:743 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:23:939 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into diaocha ( kid, mycd, content, aid, dcrq ) values ( ?, ?, ?, ?, ? ) 
+2019-03-27 21:49:23:943 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] ==> Parameters: 1(String), 满意(String), 1(String), 1(Integer), 2019-03-27 21:49:23(String)
+2019-03-27 21:49:23:993 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:49:24:034 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:49:24:038 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:49:24:046 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:24:052 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:49:24:053 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:49:24:084 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:26:868 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM (SELECT count(*) AS number, mycd FROM diaocha GROUP BY mycd) table_count 
+2019-03-27 21:49:26:871 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:49:26:971 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:26:973 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] ==>  Preparing: SELECT count(*) as number,mycd from diaocha GROUP BY mycd LIMIT ? 
+2019-03-27 21:49:26:975 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:49:26:989 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:49:56:114 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id 
+2019-03-27 21:49:56:115 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:49:56:119 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:49:59:319 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-03-27 21:49:59:321 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:49:59:325 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:11:623 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==>  Preparing: insert into admin (id, account, password, age, role, address, tel, idk, state, photo ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-03-27 21:50:11:699 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] ==> Parameters: null, kobe(String), 1(String), 50(String), 1(String), 测试(String), 15890900909(String), 22082119940619451x(String), 0(String), [B@6d4a65e6(byte[])
+2019-03-27 21:50:11:748 [cn.com.project.mapper.UserMapper.insert:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:50:11:783 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? 
+2019-03-27 21:50:11:785 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:50:11:812 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:24:367 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:50:24:368 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: kobe(String), 1(String)
+2019-03-27 21:50:24:374 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:24:376 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:50:24:377 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: kobe(String), 1(String), 10(Integer)
+2019-03-27 21:50:24:381 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:24:384 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:50:24:385 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: kobe(String), 2019-03-27 21:50:24(String), 192.168.1.109(String)
+2019-03-27 21:50:24:392 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:50:30:622 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-03-27 21:50:30:625 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:50:30:677 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:30:683 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE id=? LIMIT ? 
+2019-03-27 21:50:30:685 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-03-27 21:50:30:713 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:32:461 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-03-27 21:50:32:463 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:50:32:468 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:50:35:516 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-03-27 21:50:35:518 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:50:35:528 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:50:37:393 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==>  Preparing: select s.id, s.title, s.content, s.zxrq, s.aid,a.account from schedule s left join admin a on s.aid = a.id WHERE s.aid=? 
+2019-03-27 21:50:37:395 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:50:37:400 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:50:39:611 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:50:39:614 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:50:39:620 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:51:59:286 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:51:59:289 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 12(String)
+2019-03-27 21:51:59:296 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:02:090 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:52:02:091 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:52:02:148 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:02:151 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:52:02:152 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-03-27 21:52:02:159 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:05:318 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:52:05:320 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-03-27 21:52:05:340 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:05:342 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:52:05:344 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String), 10(Integer)
+2019-03-27 21:52:05:358 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:05:363 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:52:05:365 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:52:05(String), 192.168.1.109(String)
+2019-03-27 21:52:05:399 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:09:614 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-03-27 21:52:09:617 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:09:629 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:09:633 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-03-27 21:52:09:634 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:52:09:651 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 6
+2019-03-27 21:52:11:158 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-03-27 21:52:11:160 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 1(Integer)
+2019-03-27 21:52:11:167 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:11:195 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-03-27 21:52:11:196 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:11:204 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:11:208 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-03-27 21:52:11:209 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:52:11:229 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 5
+2019-03-27 21:52:11:701 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-03-27 21:52:11:704 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:52:11:721 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:11:738 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-03-27 21:52:11:741 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:11:757 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 4
+2019-03-27 21:52:12:065 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-03-27 21:52:12:068 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 3(Integer)
+2019-03-27 21:52:12:081 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:12:100 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-03-27 21:52:12:102 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:12:114 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:12:119 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-03-27 21:52:12:121 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-03-27 21:52:12:130 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 3
+2019-03-27 21:52:12:483 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==>  Preparing: delete from log where id = ? 
+2019-03-27 21:52:12:485 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] ==> Parameters: 4(Integer)
+2019-03-27 21:52:12:492 [cn.com.project.mapper.LogMapper.deleteByPrimaryKey:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:12:507 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-03-27 21:52:12:509 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:12:514 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:12:518 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-03-27 21:52:12:520 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:52:12:525 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:52:25:393 [cn.com.project.mapper.UserMapper.updatePassword:159]-[DEBUG] ==>  Preparing: update admin set password = ? where id = ? 
+2019-03-27 21:52:25:395 [cn.com.project.mapper.UserMapper.updatePassword:159]-[DEBUG] ==> Parameters: 12(String), 1(Integer)
+2019-03-27 21:52:25:486 [cn.com.project.mapper.UserMapper.updatePassword:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:31:579 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? 
+2019-03-27 21:52:31:581 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 12(String)
+2019-03-27 21:52:31:596 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:31:603 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:52:31:607 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-03-27 21:52:31(String), 192.168.1.109(String)
+2019-03-27 21:52:31:617 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:33:309 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM log 
+2019-03-27 21:52:33:310 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:33:349 [cn.com.project.mapper.LogMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:33:352 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log LIMIT ? 
+2019-03-27 21:52:33:354 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-03-27 21:52:33:362 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 3
+2019-03-27 21:52:35:123 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==>  Preparing: select id, name, tel, content from lxr 
+2019-03-27 21:52:35:126 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:35:132 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:52:44:910 [cn.com.project.mapper.LxrMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into lxr ( name, tel, content ) values ( ?, ?, ? ) 
+2019-03-27 21:52:44:912 [cn.com.project.mapper.LxrMapper.insertSelective:159]-[DEBUG] ==> Parameters: kobe(String), 15890900909(String), 测试(String)
+2019-03-27 21:52:44:918 [cn.com.project.mapper.LxrMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:52:44:937 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM lxr 
+2019-03-27 21:52:44:938 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:52:44:946 [cn.com.project.mapper.LxrMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:44:949 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==>  Preparing: select id, name, tel, content from lxr LIMIT ? 
+2019-03-27 21:52:44:952 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-03-27 21:52:44:977 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:48:239 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-03-27 21:52:48:241 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:52:48:248 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:48:252 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? LIMIT ? 
+2019-03-27 21:52:48:253 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 10(Integer)
+2019-03-27 21:52:48:276 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:53:209 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-03-27 21:52:53:210 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:52:53:215 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:53:219 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? LIMIT ? 
+2019-03-27 21:52:53:221 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 50(Integer)
+2019-03-27 21:52:53:241 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:55:530 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin where id = ? 
+2019-03-27 21:52:55:531 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:52:55:554 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:57:957 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-03-27 21:52:57:958 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:52:57:963 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:52:57:967 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin where id = ? LIMIT ? 
+2019-03-27 21:52:57:969 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-03-27 21:52:57:989 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:00:728 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE role = ? 
+2019-03-27 21:53:00:729 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:53:00:733 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:00:735 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? LIMIT ? 
+2019-03-27 21:53:00:736 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String), 50(Integer)
+2019-03-27 21:53:00:764 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:01:846 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-03-27 21:53:01:847 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:01:854 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 0
+2019-03-27 21:53:06:423 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into gonggao ( title, content, fname, fdate ) values ( ?, ?, ?, ? ) 
+2019-03-27 21:53:06:424 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] ==> Parameters: 测试(String), 测试(String), admin(String), 2019-03-27 21:53:06(String)
+2019-03-27 21:53:06:427 [cn.com.project.mapper.GonggaoMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:53:06:439 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM gonggao 
+2019-03-27 21:53:06:440 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:06:451 [cn.com.project.mapper.GonggaoMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:06:453 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao LIMIT ? 
+2019-03-27 21:53:06:454 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:53:06:463 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:09:135 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM message 
+2019-03-27 21:53:09:139 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:09:147 [cn.com.project.mapper.MessageMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:15:333 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into message ( title, content, fname, fdate, lx ) values ( ?, ?, ?, ?, ? ) 
+2019-03-27 21:53:15:335 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] ==> Parameters: 忘加编辑了(String), AA(String), admin(String), 2019-03-27 21:53:15(String), 简明消息(String)
+2019-03-27 21:53:15:340 [cn.com.project.mapper.MessageMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:53:15:359 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-03-27 21:53:15:360 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:15:364 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:18:894 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM schedule s LEFT JOIN admin a ON s.aid = a.id 
+2019-03-27 21:53:18:896 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:18:902 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:20:346 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:53:20:348 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:20:352 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:20:355 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh LIMIT ? 
+2019-03-27 21:53:20:356 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 50(Integer)
+2019-03-27 21:53:20:361 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:20:364 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE role = ? 
+2019-03-27 21:53:20:365 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 1(String)
+2019-03-27 21:53:20:381 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:27:393 [cn.com.project.mapper.ScheduleMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into schedule ( title, content, zxrq, aid ) values ( ?, ?, ?, ? ) 
+2019-03-27 21:53:27:396 [cn.com.project.mapper.ScheduleMapper.insertSelective:159]-[DEBUG] ==> Parameters: 测试(String), AA(String), 2019-03-28(String), 2(Integer)
+2019-03-27 21:53:27:407 [cn.com.project.mapper.ScheduleMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:53:27:430 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM schedule s LEFT JOIN admin a ON s.aid = a.id 
+2019-03-27 21:53:27:433 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:27:440 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:27:444 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==>  Preparing: select s.id, s.title, s.content, s.zxrq, s.aid,a.account from schedule s left join admin a on s.aid = a.id LIMIT ? 
+2019-03-27 21:53:27:446 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:53:27:456 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:29:948 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:53:29:950 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:29:957 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:35:528 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:53:35:530 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:35:536 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:39:708 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:53:39:710 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:39:715 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:41:173 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh 
+2019-03-27 21:53:41:175 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:41:180 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:50:995 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into order1 ( kid, aid, ddrq, remarks, state, money ) values ( ?, ?, ?, ?, ?, ? ) 
+2019-03-27 21:53:50:999 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] ==> Parameters: 1(Integer), 1(Integer), 2019-03-26(String), AA(String), 0(String), 测试(String)
+2019-03-27 21:53:51:021 [cn.com.project.mapper.OrderMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:53:51:123 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM order1 o LEFT JOIN kh k ON o.kid = k.id LEFT JOIN admin a ON o.aid = a.id 
+2019-03-27 21:53:51:125 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:51:155 [cn.com.project.mapper.OrderMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:51:166 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==>  Preparing: select o.id, o.kid, o.aid, o.ddrq, o.remarks, o.state, o.money,k.kname,a.account from order1 o left join kh k on o.kid = k.id left join admin a on o.aid = a.id LIMIT ? 
+2019-03-27 21:53:51:167 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:53:51:177 [cn.com.project.mapper.OrderMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:53:56:923 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:53:56:924 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:53:56:930 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:03:176 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into qtgs ( gsmc, cjsl, cjje, lname, lrsj ) values ( ?, ?, ?, ?, ? ) 
+2019-03-27 21:54:03:189 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] ==> Parameters: 测试(String), 测试(String), 测试(String), admin(String), 2019-03-27 21:54:03(String)
+2019-03-27 21:54:03:204 [cn.com.project.mapper.QtgsMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:54:03:240 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM qtgs 
+2019-03-27 21:54:03:241 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:03:246 [cn.com.project.mapper.QtgsMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:03:249 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs LIMIT ? 
+2019-03-27 21:54:03:250 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:03:257 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:07:088 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:54:07:090 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:07:094 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:07:098 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:54:07:100 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:07:106 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:08:929 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:54:08:930 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:08:935 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:08:938 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh LIMIT ? 
+2019-03-27 21:54:08:940 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:08:945 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:13:774 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into diaocha ( kid, mycd, content, aid, dcrq ) values ( ?, ?, ?, ?, ? ) 
+2019-03-27 21:54:13:785 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] ==> Parameters: 1(String), 不满意(String), AA(String), 1(Integer), 2019-03-27 21:54:13(String)
+2019-03-27 21:54:13:804 [cn.com.project.mapper.DiaochaMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:54:13:821 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:54:13:823 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:13:828 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:13:832 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:54:13:834 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:13:841 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:54:15:585 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM (SELECT count(*) AS number, mycd FROM diaocha GROUP BY mycd) table_count 
+2019-03-27 21:54:15:587 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:15:593 [cn.com.project.mapper.DiaochaMapper.selectTj_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:15:595 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] ==>  Preparing: SELECT count(*) as number,mycd from diaocha GROUP BY mycd LIMIT ? 
+2019-03-27 21:54:15:597 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:15:603 [cn.com.project.mapper.DiaochaMapper.selectTj:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:54:19:114 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM diaocha d LEFT JOIN kh k ON d.kid = k.id LEFT JOIN admin a ON d.aid = a.id 
+2019-03-27 21:54:19:116 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:19:121 [cn.com.project.mapper.DiaochaMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:19:125 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==>  Preparing: select d.id, d.kid, d.mycd, d.content, d.aid, d.dcrq,a.account,k.kname from diaocha d left join kh k on d.kid = k.id left join admin a on d.aid = a.id LIMIT ? 
+2019-03-27 21:54:19:127 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:19:135 [cn.com.project.mapper.DiaochaMapper.select:159]-[DEBUG] <==      Total: 2
+2019-03-27 21:54:20:435 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM kh 
+2019-03-27 21:54:20:438 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:20:445 [cn.com.project.mapper.KhMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:20:449 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==>  Preparing: select id, kname, bianhao, lxr, dz, khjb, khly, lname from kh LIMIT ? 
+2019-03-27 21:54:20:451 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] ==> Parameters: 10(Integer)
+2019-03-27 21:54:20:457 [cn.com.project.mapper.KhMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:28:348 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE account = ? AND password = ? 
+2019-03-27 21:54:28:351 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] ==> Parameters: kobe(String), 1(String)
+2019-03-27 21:54:28:369 [cn.com.project.mapper.UserMapper.login_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:28:372 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state from admin where account = ? AND password=? LIMIT ? 
+2019-03-27 21:54:28:374 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: kobe(String), 1(String), 10(Integer)
+2019-03-27 21:54:28:383 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:28:391 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-03-27 21:54:28:395 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: kobe(String), 2019-03-27 21:54:28(String), 192.168.1.109(String)
+2019-03-27 21:54:28:401 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-03-27 21:54:30:973 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-03-27 21:54:30:975 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:54:30:981 [cn.com.project.mapper.UserMapper.selectUserList_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:30:986 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE id=? LIMIT ? 
+2019-03-27 21:54:30:989 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-03-27 21:54:31:014 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:32:281 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM admin WHERE id = ? 
+2019-03-27 21:54:32:283 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:54:32:292 [cn.com.project.mapper.UserMapper.selectByPrimaryKey_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:32:295 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin where id = ? LIMIT ? 
+2019-03-27 21:54:32:297 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-03-27 21:54:32:318 [cn.com.project.mapper.UserMapper.selectByPrimaryKey:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:33:833 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state , photo from admin WHERE id=? 
+2019-03-27 21:54:33:835 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:54:33:852 [cn.com.project.mapper.UserMapper.selectUserList:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:34:859 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate from gonggao 
+2019-03-27 21:54:34:861 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:34:866 [cn.com.project.mapper.GonggaoMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:36:321 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==>  Preparing: select id, title, content, fname, fdate, lx from message 
+2019-03-27 21:54:36:322 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:36:327 [cn.com.project.mapper.MessageMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:38:641 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==>  Preparing: SELECT count(0) FROM schedule s LEFT JOIN admin a ON s.aid = a.id WHERE s.aid = ? 
+2019-03-27 21:54:38:642 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] ==> Parameters: 2(Integer)
+2019-03-27 21:54:38:646 [cn.com.project.mapper.ScheduleMapper.select_COUNT:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:38:649 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==>  Preparing: select s.id, s.title, s.content, s.zxrq, s.aid,a.account from schedule s left join admin a on s.aid = a.id WHERE s.aid=? LIMIT ? 
+2019-03-27 21:54:38:650 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] ==> Parameters: 2(Integer), 10(Integer)
+2019-03-27 21:54:38:658 [cn.com.project.mapper.ScheduleMapper.select:159]-[DEBUG] <==      Total: 1
+2019-03-27 21:54:42:458 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==>  Preparing: select id, gsmc, cjsl, cjje, lname, lrsj from qtgs 
+2019-03-27 21:54:42:460 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-03-27 21:54:42:467 [cn.com.project.mapper.QtgsMapper.select:159]-[DEBUG] <==      Total: 1

@@ -1,0 +1,12 @@
+2019-05-10 21:54:39:853 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==>  Preparing: select id, account, password, age, role, address, tel, idk, state,yx from admin where account = ? AND password=? 
+2019-05-10 21:54:39:884 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] ==> Parameters: admin(String), 1(String)
+2019-05-10 21:54:39:952 [cn.com.project.mapper.UserMapper.login:159]-[DEBUG] <==      Total: 1
+2019-05-10 21:54:40:026 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==>  Preparing: insert into log ( dlr, dlsj, dlip ) values ( ?, ?, ? ) 
+2019-05-10 21:54:40:027 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] ==> Parameters: admin(String), 2019-05-10 21:54:39(String), 10.160.123.123(String)
+2019-05-10 21:54:40:064 [cn.com.project.mapper.LogMapper.insertSelective:159]-[DEBUG] <==    Updates: 1
+2019-05-10 21:54:43:442 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==>  Preparing: select id, dlr, dlsj, dlip from log 
+2019-05-10 21:54:43:444 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-10 21:54:43:453 [cn.com.project.mapper.LogMapper.select:159]-[DEBUG] <==      Total: 9
+2019-05-10 21:54:45:236 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==>  Preparing: select id, name, tel, content from lxr 
+2019-05-10 21:54:45:237 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] ==> Parameters: 
+2019-05-10 21:54:45:276 [cn.com.project.mapper.LxrMapper.select:159]-[DEBUG] <==      Total: 0

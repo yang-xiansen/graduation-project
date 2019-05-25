@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- 在MBG工作的时候，需要额外加载的依赖包 location属性指明加载jar/zip包的全路径 -->
+	<classPathEntry location="mysql-connector-java-5.1.25-bin.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 加载数据库驱动，填写相关的连接属性 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3308/relation" userId="root"
+			password="mysql">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 自动生成实体类的位置，enableSubPackages==true=>如果不存在具体包的话，会自动创建 -->
+		<!-- targetProject属性为创建的文件的根目录路径，可以为绝对路径，也可以为相对路径 -->
+		<javaModelGenerator targetPackage="cn.com.project.domain" targetProject="E:/jlb/relation/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 自动生成映射文件（即对应的xml文件）的位置，enableSubPackages==true=>如果不存在具体包的话，会自动创建 -->
+		<sqlMapGenerator targetPackage="cn.com.project.mapping" targetProject="E:/jlb/relation/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 自动生成数据操作接口的位置，enableSubPackages==true=>如果不存在具体包的话，会自动创建 -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.com.project.mapper" targetProject="E:/jlb/relation/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootInterface" value=""/>
+		</javaClientGenerator>
+		<!-- 数据源 填写想要操作的表名，以及生成的对象的名 -->
+		<table tableName="qtgs" domainObjectName="Qtgs"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+	</context>
+</generatorConfiguration>  
